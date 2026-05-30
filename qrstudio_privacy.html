@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR Studio · Privacy Policy</title>
+  <style>
+    :root {
+      --bg: #f9f7f2;
+      --panel: #ffffff;
+      --text: #1a1a1a;
+      --muted: #666666;
+      --line: #e8e4dc;
+      --accent: #1a1a1a;
+      --tag-bg: #f2f0eb;
+      --num-color: #bbb;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: linear-gradient(180deg, #fffaf3 0%, var(--bg) 100%);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    main {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+
+    /* ── Header ── */
+    .header {
+      margin-bottom: 40px;
+    }
+    .app-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--tag-bg);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 6px 14px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+    .app-label span { font-size: 1rem; }
+    h1 {
+      font-size: clamp(2.4rem, 6vw, 3.6rem);
+      line-height: 1.0;
+      letter-spacing: -0.04em;
+      margin-bottom: 10px;
+    }
+    h1 em {
+      font-style: normal;
+      color: var(--muted);
+    }
+    .tagline {
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      max-width: 560px;
+      margin-bottom: 24px;
+    }
+
+    /* ── Meta pills ── */
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 40px;
+    }
+    .pill {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 6px 14px;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    /* ── Sections ── */
+    .section {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 32px;
+      margin-bottom: 16px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+    }
+
+    .section-num {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--num-color);
+      margin-bottom: 4px;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+
+    p {
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: #333;
+      margin-bottom: 14px;
+    }
+    p:last-child { margin-bottom: 0; }
+
+    /* ── Dash list ── */
+    .dash-list {
+      list-style: none;
+      margin: 10px 0 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .dash-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.93rem;
+      line-height: 1.6;
+      color: #333;
+    }
+    .dash-list li::before {
+      content: "—";
+      color: var(--num-color);
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* ── Callout ── */
+    .callout {
+      background: var(--tag-bg);
+      border-left: 3px solid var(--accent);
+      border-radius: 8px;
+      padding: 12px 16px;
+      font-size: 0.88rem;
+      color: #444;
+      line-height: 1.65;
+      margin-top: 14px;
+    }
+    .callout strong { color: var(--text); }
+
+    /* ── Third-party table ── */
+    .tp-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 6px;
+    }
+    .tp-row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .tp-row:last-child { border-bottom: none; padding-bottom: 0; }
+    .tp-name { font-weight: 700; font-size: 0.93rem; margin-bottom: 2px; }
+    .tp-desc { font-size: 0.83rem; color: var(--muted); }
+    .tp-link a {
+      font-size: 0.8rem;
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: none;
+      white-space: nowrap;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 4px 12px;
+    }
+    .tp-link a:hover { background: var(--accent); color: #fff; }
+
+    /* ── Rights grid ── */
+    .rights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+      gap: 8px;
+      margin: 14px 0;
+    }
+    .right-pill {
+      background: var(--tag-bg);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 10px 14px;
+      font-size: 0.83rem;
+      font-weight: 600;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    /* ── Controls ── */
+    .controls-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .control-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.92rem;
+      color: #333;
+    }
+    .control-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: var(--tag-bg);
+      border: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    /* ── Contact card ── */
+    .contact-card {
+      background: var(--accent);
+      color: #fff;
+      border-radius: 24px;
+      padding: 32px;
+      margin-top: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .contact-card h2 { color: #fff; margin-bottom: 4px; }
+    .contact-card p { color: rgba(255,255,255,0.7); margin: 0; }
+    .contact-card a {
+      display: inline-block;
+      margin-top: 8px;
+      background: #fff;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.9rem;
+      border-radius: 999px;
+      padding: 10px 22px;
+      width: fit-content;
+    }
+    .contact-card a:hover { opacity: 0.9; }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.8rem;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 500px) {
+      .section { padding: 22px 18px; }
+      h1 { font-size: 2.2rem; }
+    }
+  </style>
+</head>
+<body>
+<main>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="app-label"><span>⬛</span> QR Studio</div>
+    <h1>Privacy <em>Policy</em></h1>
+    <p class="tagline">This policy explains how QR Studio handles your data, local storage, ads, permissions, purchases, and your privacy choices.</p>
+    <div class="meta-row">
+      <span class="pill">📅 Effective May 30, 2026</span>
+      <span class="pill">🔄 Updated May 30, 2026</span>
+      <span class="pill">📱 QR Studio</span>
+      <span class="pill">📶 Offline-first design</span>
+    </div>
+  </header>
+
+  <!-- 01 Overview -->
+  <section class="section">
+    <div class="section-num">01 · Overview</div>
+    <h2>About QR Studio</h2>
+    <p>QR Studio is an offline-first QR code generator and scanner app. The app generates, customises, and scans QR codes entirely on your device. QR Studio does not send your QR content to a backend server.</p>
+    <p>The app may include ads served by Google Mobile Ads and optional Pro features available through in-app purchase. This policy explains what data is handled locally, what third-party services may process, and what choices you have.</p>
+  </section>
+
+  <!-- 02 Local Data -->
+  <section class="section">
+    <div class="section-num">02 · Local Data</div>
+    <h2>Data stored locally on your device</h2>
+    <p>QR Studio may store the following data locally on your device:</p>
+    <ul class="dash-list">
+      <li>Your selected QR type and content (URL, text, contact, Wi-Fi, and so on)</li>
+      <li>Style and customisation preferences (colours, logo, pattern)</li>
+      <li>QR code history if you enable history within the app</li>
+      <li>Local unlock or purchase state for Pro features</li>
+      <li>App settings and preferences</li>
+    </ul>
+    <div class="callout"><strong>Offline-first design:</strong> QR content you enter is processed and stored on your device only. QR Studio does not transmit your QR content to our servers.</div>
+  </section>
+
+  <!-- 03 QR Generation & Scanning -->
+  <section class="section">
+    <div class="section-num">03 · QR Generation & Scanning</div>
+    <h2>How QR codes are generated and scanned</h2>
+    <p>QR codes are generated on-device using local processing. The content you encode — such as a URL, phone number, Wi-Fi password, or text — does not leave your device during generation.</p>
+    <p>When you scan a QR code using the app's camera, the decoded content is displayed on your device. Scanned content is not automatically transmitted to QR Studio or any third party.</p>
+    <div class="callout"><strong>Camera permission:</strong> Camera access is used solely for scanning QR codes. QR Studio does not use the camera for background recording or surveillance.</div>
+  </section>
+
+  <!-- 04 Sharing & Saving -->
+  <section class="section">
+    <div class="section-num">04 · Sharing & Saving</div>
+    <h2>Exporting and sharing QR codes</h2>
+    <p>When you export or share a QR code image, the app hands the generated file to the operating system share sheet or saves it to your device gallery if you choose Save. QR Studio does not upload exported QR images to its own server.</p>
+    <p>If you share a file through another app, cloud service, messaging service, email app, or printing service, that third-party service may process the file according to its own privacy policy.</p>
+  </section>
+
+  <!-- 05 Advertising -->
+  <section class="section">
+    <div class="section-num">05 · Advertising</div>
+    <h2>Advertising</h2>
+    <p>The free version of QR Studio may display ads through <strong>Google Mobile Ads (AdMob)</strong>. Google AdMob and its partners may collect or process data such as:</p>
+    <ul class="dash-list">
+      <li>Device advertising ID</li>
+      <li>IP address and approximate location</li>
+      <li>App activity related to ad display and ad performance</li>
+      <li>Device model, operating system, app information, diagnostics, and performance data</li>
+    </ul>
+    <p>This data may be used for ad delivery, ad measurement, fraud prevention, frequency capping, and related advertising purposes. You can manage ad personalisation through your device settings or Google ad settings where available.</p>
+    <div class="callout"><strong>Pro or ad-free option:</strong> If you purchase a Pro or ad-free upgrade, in-app ads are removed according to the purchased feature.</div>
+  </section>
+
+  <!-- 06 Purchases -->
+  <section class="section">
+    <div class="section-num">06 · Purchases</div>
+    <h2>In-app purchases</h2>
+    <p>QR Studio may offer in-app purchases through Google Play, Apple App Store, or other app-store platforms for Pro features such as advanced customisation, batch generation, or an ad-free experience.</p>
+    <p>Payment processing is handled entirely by the app-store provider. QR Studio does not receive your full payment card details. QR Studio may receive purchase status or licensing information needed to unlock Pro features on your device.</p>
+  </section>
+
+  <!-- 07 Permissions -->
+  <section class="section">
+    <div class="section-num">07 · Permissions</div>
+    <h2>Device permissions</h2>
+    <p>QR Studio may request the following permissions depending on the feature and device platform:</p>
+    <ul class="dash-list">
+      <li><strong>Camera</strong> — to scan QR codes using your device camera</li>
+      <li><strong>Storage / Media</strong> — to save generated QR code images to your gallery</li>
+      <li><strong>Internet / Network</strong> — required for ad delivery by Google Mobile Ads</li>
+    </ul>
+    <div class="callout"><strong>Minimum permissions:</strong> QR Studio requests only the permissions needed for the features you use. Camera access is not used for background recording.</div>
+  </section>
+
+  <!-- 08 Third Parties -->
+  <section class="section">
+    <div class="section-num">08 · Third Parties</div>
+    <h2>Third-party services</h2>
+    <p>QR Studio may use the following third-party services. These services process data according to their own privacy policies.</p>
+    <div class="tp-grid">
+      <div class="tp-row">
+        <div><div class="tp-name">Google Mobile Ads (AdMob)</div><div class="tp-desc">Advertising and ad measurement</div></div>
+        <div class="tp-link"><a href="https://policies.google.com/privacy" target="_blank">View policy →</a></div>
+      </div>
+      <div class="tp-row">
+        <div><div class="tp-name">Google Play Services</div><div class="tp-desc">Platform services, purchases, licensing, and app functionality</div></div>
+        <div class="tp-link"><a href="https://policies.google.com/privacy" target="_blank">View policy →</a></div>
+      </div>
+      <div class="tp-row">
+        <div><div class="tp-name">Apple App Store</div><div class="tp-desc">Platform services, purchases, and app functionality on iOS if available</div></div>
+        <div class="tp-link"><a href="https://www.apple.com/legal/privacy/" target="_blank">View policy →</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 09 Retention -->
+  <section class="section">
+    <div class="section-num">09 · Retention</div>
+    <h2>Data retention and deletion</h2>
+    <p>QR content, history, style preferences, and settings are stored locally on your device. You can delete this data at any time by:</p>
+    <ul class="dash-list">
+      <li>Clearing QR history inside the app where available</li>
+      <li>Clearing app data from your device settings</li>
+      <li>Uninstalling the app</li>
+      <li>Deleting exported QR images from your device gallery or storage</li>
+    </ul>
+    <p>Data processed by third-party services such as Google AdMob or Google Play is retained according to those services' own policies.</p>
+  </section>
+
+  <!-- 10 Security -->
+  <section class="section">
+    <div class="section-num">10 · Security</div>
+    <h2>Data security</h2>
+    <p>QR Studio uses platform security features for locally stored data. Data transmitted by third-party services such as Google AdMob uses secure transmission methods provided by those services.</p>
+    <p>Because QR content is processed and stored on your device, you are responsible for protecting your device with a screen lock, password, or other device security controls.</p>
+    <div class="callout"><strong>No system is perfect:</strong> No method of storage or transmission is completely secure, but we aim to use reasonable safeguards appropriate for the app's design.</div>
+  </section>
+
+  <!-- 11 Controls -->
+  <section class="section">
+    <div class="section-num">11 · Controls</div>
+    <h2>Your privacy choices</h2>
+    <div class="controls-grid">
+      <div class="control-row"><div class="control-icon">🗑️</div>Clear QR history inside the app or via device settings</div>
+      <div class="control-row"><div class="control-icon">📱</div>Manage ad personalisation in device or Google settings</div>
+      <div class="control-row"><div class="control-icon">💎</div>Purchase Pro or ad-free option to remove ads</div>
+      <div class="control-row"><div class="control-icon">⚙️</div>Clear app data or uninstall the app at any time</div>
+      <div class="control-row"><div class="control-icon">✉️</div>Contact us for privacy-related questions or requests</div>
+    </div>
+  </section>
+
+  <!-- 12 Regional Rights -->
+  <section class="section">
+    <div class="section-num">12 · Regional Rights</div>
+    <h2>Regional privacy rights</h2>
+    <p>Depending on your country or region, you may have privacy rights such as requesting access, correction, deletion, restriction, objection, or portability of personal data processed about you.</p>
+    <div class="rights-grid">
+      <div class="right-pill">Access</div>
+      <div class="right-pill">Correction</div>
+      <div class="right-pill">Deletion</div>
+      <div class="right-pill">Restriction</div>
+      <div class="right-pill">Objection</div>
+      <div class="right-pill">Portability</div>
+      <div class="right-pill">Withdraw consent</div>
+      <div class="right-pill">Contact us</div>
+    </div>
+    <p>Because QR Studio stores data locally on your device and does not operate an online server for QR content, many deletion and correction actions can be performed directly from your device.</p>
+  </section>
+
+  <!-- 13 Updates -->
+  <section class="section">
+    <div class="section-num">13 · Updates</div>
+    <h2>Policy updates</h2>
+    <p>We may update this Privacy Policy when the app changes, when third-party services change, or when legal or platform requirements change. When we make changes, we will update the "Last Updated" date at the top of this page.</p>
+    <p>Continued use of the app after updates constitutes acceptance of the revised policy.</p>
+  </section>
+
+  <!-- Contact -->
+  <div class="contact-card">
+    <div>
+      <h2>Questions or privacy requests?</h2>
+      <p>Contact us and use the subject line "QR Studio Privacy Request" so we can assist you promptly.</p>
+    </div>
+    <a href="mailto:?subject=QR%20Studio%20Privacy%20Request">Send a message →</a>
+  </div>
+
+  <footer>
+    <p>© 2026 QR Studio. All rights reserved.</p>
+  </footer>
+
+</main>
+</body>
+</html>
